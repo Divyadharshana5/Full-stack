@@ -203,4 +203,20 @@ Australia": ["Australian Capital Territory", "New South Wales", "Northern Territ
   
   "Malaysia": ["Johor", "Kedah", "Kelantan", "Kuala Lumpur", "Labuan", "Malacca", "Negeri Sembilan", "Pahang", "Penang", "Perak", "Perlis", "Putrajaya", "Sabah", "Sarawak", "Selangor", "Terengganu"],
   
-  "Maldives": ["Addu Atoll", "Alif Alif Atoll", "Alif Dhaal Atoll", "Baa Atoll", "Dhaalu Atoll", "Faafu Atoll", "Gaafu Alif Atoll", "Gaafu Dhaalu Atoll", "Gnaviyani Atoll", "Haa Alif Atoll", "Haa Dhaalu Atoll", "Kaafu Atoll", "Laamu Atoll", "Lhaviyani Atoll", "Malé", "Meemu Atoll", "Noonu Atoll", "Raa Atoll", "Seenu Atoll", "Shaviyani Atoll", "Thaa Atoll", "Vaavu Atoll"],
+  "Maldives": ["Addu Atoll", "Alif Alif Atoll", "Alif Dhaal Atoll", "Baa Atoll", "Dhaalu Atoll", "Faafu Atoll", "Gaafu Alif Atoll", "Gaafu Dhaalu Atoll", "Gnaviyani Atoll", "Haa Alif Atoll", "Haa Dhaalu Atoll", "Kaafu Atoll", "Laamu Atoll", "Lhaviyani Atoll", "Malé", "Meemu Atoll", "Noonu Atoll", "Raa Atoll", "Seenu Atoll", "Shaviyani Atoll", "Thaa Atoll", "Vaavu Atoll"],  
+ 
+ "Mali": ["Bamako", "Gao", "Kayes", "Kidal", "Koulikoro", "Ménaka", "Mopti", "Ségou", "Sikasso", "Taoudénit", "Tombouctou"],
+  
+  "Malta": ["Gozo and Comino", "Malta"],
+  
+  "Marshall Islands": ["Ailinglaplap Atoll", "Ailuk Atoll", "Arno Atoll", "Aur Atoll", "Bikini Atoll", "Ebon Atoll", "Enewetak Atoll", "Jabat Island", "Jaluit Atoll", "Kili Island", "Kwajalein Atoll", "Lae Atoll", "Lib Island", "Likiep Atoll", "Majuro Atoll", "Maloelap Atoll", "Mejit Island", "Mili Atoll", "Namdrik Atoll", "Namu Atoll", "Rongelap Atoll", "Rongerik Atoll", "Toke Atoll", "Ujae Atoll", "Ujelang Atoll", "Utirik Atoll", "Wotho Atoll", "Wotje Atoll"],
+  
+  "Mauritania": ["Adrar", "Assaba", "Brakna", "Dakhlet Nouadhibou", "Gorgol", "Guidimaka", "Hodh Ech Chargui", "Hodh El Gharbi", "Inchiri", "Nouakchott-Nord", "Nouakchott-Ouest", "Nouakchott-Sud", "Tagant", "Tiris Zemmour", "Trarza"],
+  
+  "Mauritius": ["Agaléga", "Black River", "Cargados Carajos", "Flacq", "Grand Port", "Moka", "Pamplemousses", "Plaines Wilhems", "Port Louis", "Rivière du Rempart", "Rodrigues", "Savanne"],
+  
+  "Mexico": ["Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas", "Chihuahua", "Coahuila", "Colima", "Durango", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "Mexico", "Mexico City", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas"],
+  
+  "Micronesia": ["Chuuk", "Kosrae", "Pohnpei", "Yap"],
+  
+  "Moldova": ["Anenii Noi", "Basarabeasca", "Briceni", "Cahul", "Cantemir", "Căușeni", "Chișinău", "Cimișlia", "Criuleni", "Dondușeni", "Drochia", "Dubăsari", "Edineț", "Fălești", "Florești", "Găgăuzia", "Glodeni", "Hîncești", "Ialoveni", "Leova", "Nisporeni", "Ocnița", "Orhei", "Rezina", "Rîșcani", "Sîngerei", "Soroca", "Strășeni", "Șoldănești", "Ștefan Vodă", "Taraclia", "Telenești", "Transnistria", "Ungheni"],
