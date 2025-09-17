@@ -380,13 +380,30 @@ function App() {
             placeholder="Search records..."
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            sx={{ minWidth: 250 }}
+            sx={{ 
+              minWidth: 250,
+              '& .MuiOutlinedInput-root': {
+                '&:hover .MuiOutlinedInput-notchedOutline': {
+                  borderColor: '#000000',
+                  borderWidth: '2px',
+                },
+                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                  borderColor: '#000000',
+                  borderWidth: '2px',
+                },
+              }
+            }}
             InputProps={{
               endAdornment: filter && (
                 <InputAdornment position="end">
                   <IconButton
                     size="small"
                     onClick={() => setFilter('')}
+                    sx={{
+                      '&:hover': {
+                        backgroundColor: 'rgba(0, 0, 0, 0.04)'
+                      }
+                    }}
                   >
                     <ClearIcon fontSize="small" />
                   </IconButton>
