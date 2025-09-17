@@ -33,6 +33,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import dayjs from 'dayjs';
 import { countriesData } from './countriesData';
+import { citiesData } from './citiesData';
 
 const initialData = [
   {
@@ -101,9 +102,15 @@ function App() {
         [field]: value
       };
       
-      // Reset state when country changes
+      // Reset state and city when country changes
       if (field === 'country') {
         newData.state = '';
+        newData.city = '';
+      }
+      
+      // Reset city when state changes
+      if (field === 'state') {
+        newData.city = '';
       }
       
       return newData;
@@ -296,10 +303,21 @@ function App() {
                   value={formData.city}
                   label="City"
                   onChange={(e) => handleInputChange('city', e.target.value)}
+                  disabled={!formData.state}
                 >
-                  <MenuItem value="Surat">Surat</MenuItem>
-                  <MenuItem value="Rajkot">Rajkot</MenuItem>
-                  <MenuItem value="Alton">Alton</MenuItem>
+                  {formData.country && formData.state && citiesData[formData.country] && citiesData[formData.country][formData.state] ? 
+                    citiesData[formData.country][formData.state].map((city) => (
+                      <MenuItem key={city} value={city}>
+                        {city}
+                      </MenuItem>
+                    )) : []
+                  }
+                  {/* Fallback option for manual entry if no cities available */}
+                  {formData.state && (!citiesData[formData.country] || !citiesData[formData.country][formData.state]) && (
+                    <MenuItem value="" disabled>
+                      <em>No cities available - you can type manually in address</em>
+                    </MenuItem>
+                  )}
                 </Select>
               </FormControl>
             </Grid>
