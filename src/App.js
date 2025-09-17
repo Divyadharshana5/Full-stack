@@ -373,37 +373,20 @@ function App() {
 
         {/* Filter Section */}
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
-          <Typography variant="body2" sx={{ fontWeight: 'medium', color: '#6a1b9a' }}>Filter</Typography>
+          <Typography variant="body2">Filter</Typography>
           <TextField
             size="small"
             variant="outlined"
             placeholder="Search records..."
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            sx={{ 
-              minWidth: 250,
-              '& .MuiOutlinedInput-root': {
-                borderRadius: 2,
-                '&:hover .MuiOutlinedInput-notchedOutline': {
-                  borderColor: '#6a1b9a',
-                },
-                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                  borderColor: '#6a1b9a',
-                },
-              }
-            }}
+            sx={{ minWidth: 250 }}
             InputProps={{
               endAdornment: filter && (
                 <InputAdornment position="end">
                   <IconButton
                     size="small"
                     onClick={() => setFilter('')}
-                    sx={{ 
-                      color: '#6a1b9a',
-                      '&:hover': { 
-                        backgroundColor: 'rgba(106, 27, 154, 0.1)' 
-                      }
-                    }}
                   >
                     <ClearIcon fontSize="small" />
                   </IconButton>
