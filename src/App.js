@@ -450,7 +450,7 @@ function App() {
                   <TableCell>{row.city}</TableCell>
                   <TableCell>{row.address}</TableCell>
                   <TableCell>{row.pincode}</TableCell>
-                  <TableCell>
+                  <TableCell align="center">
                     <IconButton 
                       size="small" 
                       onClick={() => handleEdit(row.id)}
@@ -463,7 +463,7 @@ function App() {
                       <EditIcon fontSize="small" />
                     </IconButton>
                   </TableCell>
-                  <TableCell>
+                  <TableCell align="center">
                     <IconButton 
                       size="small" 
                       onClick={() => handleDelete(row.id)}
