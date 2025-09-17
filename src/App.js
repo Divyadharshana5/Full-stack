@@ -418,15 +418,11 @@ function App() {
           <Table size="small">
             <TableHead>
               <TableRow sx={{ 
-                background: 'linear-gradient(135deg, #6a1b9a 0%, #8e24aa 50%, #ab47bc 100%)',
+                backgroundColor: '#f8f9fa',
                 '& .MuiTableCell-root': {
-                  color: 'white',
+                  color: '#9c27b0',
                   fontWeight: 'bold',
                   fontSize: '0.875rem',
-                  letterSpacing: '0.5px',
-                  textTransform: 'uppercase',
-                  borderBottom: '2px solid rgba(255,255,255,0.2)',
-                  padding: '16px 8px',
                 }
               }}>
                 <TableCell padding="checkbox">
@@ -435,15 +431,6 @@ function App() {
                     checked={data.length > 0 && selectedRows.length === data.length}
                     onChange={handleSelectAll}
                     size="small"
-                    sx={{
-                      color: 'rgba(255,255,255,0.7)',
-                      '&.Mui-checked': {
-                        color: 'white',
-                      },
-                      '&.MuiCheckbox-indeterminate': {
-                        color: 'white',
-                      }
-                    }}
                   />
                 </TableCell>
                 <TableCell>First Name</TableCell>
