@@ -73,4 +73,24 @@ Australia": ["Australian Capital Territory", "New South Wales", "Northern Territ
   
   "Colombia": ["Amazonas", "Antioquia", "Arauca", "Atlántico", "Bolívar", "Boyacá", "Caldas", "Caquetá", "Casanare", "Cauca", "Cesar", "Chocó", "Córdoba", "Cundinamarca", "Guainía", "Guaviare", "Huila", "La Guajira", "Magdalena", "Meta", "Nariño", "Norte de Santander", "Putumayo", "Quindío", "Risaralda", "San Andrés y Providencia", "Santander", "Sucre", "Tolima", "Valle del Cauca", "Vaupés", "Vichada"],
   
-  "Comoros": ["Anjouan", "Grande Comore", "Mohéli"],
+  "Comoros": ["Anjouan", "Grande Comore", "Mohéli"],  
+  
+"Congo": ["Bouenza", "Cuvette", "Cuvette-Ouest", "Kouilou", "Lékoumou", "Likouala", "Niari", "Plateaux", "Pool", "Sangha"],
+  
+  "Democratic Republic of the Congo": ["Bas-Uele", "Équateur", "Haut-Katanga", "Haut-Lomami", "Haut-Uele", "Ituri", "Kasaï", "Kasaï-Central", "Kasaï-Oriental", "Kinshasa", "Kongo Central", "Kwango", "Kwilu", "Lomami", "Lualaba", "Mai-Ndombe", "Maniema", "Mongala", "Nord-Kivu", "Nord-Ubangi", "Sankuru", "Sud-Kivu", "Sud-Ubangi", "Tanganyika", "Tshopo", "Tshuapa"],
+  
+  "Costa Rica": ["Alajuela", "Cartago", "Guanacaste", "Heredia", "Limón", "Puntarenas", "San José"],
+  
+  "Croatia": ["Bjelovar-Bilogora", "Brodsko-posavska", "Dubrovnik-Neretva", "Istria", "Karlovac", "Koprivnica-Križevci", "Krapina-Zagorje", "Lika-Senj", "Međimurje", "Osijek-Baranja", "Požega-Slavonia", "Primorje-Gorski Kotar", "Šibenik-Knin", "Sisak-Moslavina", "Split-Dalmatia", "Varaždin", "Virovitica-Podravina", "Vukovar-Syrmia", "Zadar", "Zagreb", "Zagreb County"],
+  
+  "Cuba": ["Artemisa", "Camagüey", "Ciego de Ávila", "Cienfuegos", "Granma", "Guantánamo", "Havana", "Holguín", "Isle of Youth", "Las Tunas", "Matanzas", "Mayabeque", "Pinar del Río", "Sancti Spíritus", "Santiago de Cuba", "Villa Clara"],
+  
+  "Cyprus": ["Famagusta", "Kyrenia", "Larnaca", "Limassol", "Nicosia", "Paphos"],
+  
+  "Czech Republic": ["Central Bohemian Region", "Hradec Králové Region", "Karlovy Vary Region", "Liberec Region", "Moravian-Silesian Region", "Olomouc Region", "Pardubice Region", "Plzeň Region", "Prague", "South Bohemian Region", "South Moravian Region", "Ústí nad Labem Region", "Vysočina Region", "Zlín Region"],
+  
+  "Denmark": ["Capital Region", "Central Denmark Region", "North Denmark Region", "Region Zealand", "Region of Southern Denmark"],
+  
+  "Djibouti": ["Ali Sabieh Region", "Arta Region", "Dikhil Region", "Djibouti Region", "Obock Region", "Tadjourah Region"],
+  
+  "Dominica": ["Saint Andrew Parish", "Saint David Parish", "Saint George Parish", "Saint John Parish", "Saint Joseph Parish", "Saint Luke Parish", "Saint Mark Parish", "Saint Patrick Parish", "Saint Paul Parish", "Saint Peter Parish"],
