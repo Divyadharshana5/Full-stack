@@ -32,6 +32,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import dayjs from 'dayjs';
+import { countriesData } from './countriesData';
 
 const initialData = [
   {
@@ -94,10 +95,19 @@ function App() {
   const [filter, setFilter] = useState('');
 
   const handleInputChange = (field, value) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: value
-    }));
+    setFormData(prev => {
+      const newData = {
+        ...prev,
+        [field]: value
+      };
+      
+      // Reset state when country changes
+      if (field === 'country') {
+        newData.state = '';
+      }
+      
+      return newData;
+    });
   };
 
   const handleSubmit = () => {
@@ -252,9 +262,11 @@ function App() {
                   label="Country"
                   onChange={(e) => handleInputChange('country', e.target.value)}
                 >
-                  <MenuItem value="India">India</MenuItem>
-                  <MenuItem value="United States">United States</MenuItem>
-                  <MenuItem value="Canada">Canada</MenuItem>
+                  {Object.keys(countriesData).sort().map((country) => (
+                    <MenuItem key={country} value={country}>
+                      {country}
+                    </MenuItem>
+                  ))}
                 </Select>
               </FormControl>
             </Grid>
@@ -265,10 +277,15 @@ function App() {
                   value={formData.state}
                   label="State"
                   onChange={(e) => handleInputChange('state', e.target.value)}
+                  disabled={!formData.country}
                 >
-                  <MenuItem value="Gujarat">Gujarat</MenuItem>
-                  <MenuItem value="Texas">Texas</MenuItem>
-                  <MenuItem value="California">California</MenuItem>
+                  {formData.country && countriesData[formData.country] ? 
+                    countriesData[formData.country].map((state) => (
+                      <MenuItem key={state} value={state}>
+                        {state}
+                      </MenuItem>
+                    )) : []
+                  }
                 </Select>
               </FormControl>
             </Grid>
