@@ -417,13 +417,33 @@ function App() {
         <TableContainer component={Paper}>
           <Table size="small">
             <TableHead>
-              <TableRow sx={{ backgroundColor: '#f8f9fa' }}>
+              <TableRow sx={{ 
+                background: 'linear-gradient(135deg, #6a1b9a 0%, #8e24aa 50%, #ab47bc 100%)',
+                '& .MuiTableCell-root': {
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: '0.875rem',
+                  letterSpacing: '0.5px',
+                  textTransform: 'uppercase',
+                  borderBottom: '2px solid rgba(255,255,255,0.2)',
+                  padding: '16px 8px',
+                }
+              }}>
                 <TableCell padding="checkbox">
                   <Checkbox
                     indeterminate={selectedRows.length > 0 && selectedRows.length < data.length}
                     checked={data.length > 0 && selectedRows.length === data.length}
                     onChange={handleSelectAll}
                     size="small"
+                    sx={{
+                      color: 'rgba(255,255,255,0.7)',
+                      '&.Mui-checked': {
+                        color: 'white',
+                      },
+                      '&.MuiCheckbox-indeterminate': {
+                        color: 'white',
+                      }
+                    }}
                   />
                 </TableCell>
                 <TableCell>First Name</TableCell>
@@ -436,8 +456,8 @@ function App() {
                 <TableCell>City</TableCell>
                 <TableCell>Address</TableCell>
                 <TableCell>Pincode</TableCell>
-                <TableCell>Edit</TableCell>
-                <TableCell>Delete</TableCell>
+                <TableCell align="center">Edit</TableCell>
+                <TableCell align="center">Delete</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
