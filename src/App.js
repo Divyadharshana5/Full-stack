@@ -36,47 +36,7 @@ import dayjs from 'dayjs';
 import { countriesData } from './countriesData';
 import { citiesData } from './citiesData';
 
-const initialData = [
-  {
-    id: 1,
-    firstName: 'Nikunj',
-    lastName: 'Satasiya',
-    dateOfBirth: '04-08-1996',
-    emailId: 'info.codingvila@gmail.com',
-    gender: 'Male',
-    country: 'India',
-    state: 'Gujarat',
-    city: 'Surat',
-    address: 'Surat City',
-    pincode: '395030'
-  },
-  {
-    id: 2,
-    firstName: 'Hiren',
-    lastName: 'Dobariya',
-    dateOfBirth: '02-06-1996',
-    emailId: 'hirendobariya@gmail.com',
-    gender: 'Male',
-    country: 'India',
-    state: 'Gujarat',
-    city: 'Rajkot',
-    address: 'Rajkot City',
-    pincode: '562366'
-  },
-  {
-    id: 3,
-    firstName: 'Shreya',
-    lastName: 'Patel',
-    dateOfBirth: '03-03-1995',
-    emailId: 'shreya.patel@gmail.com',
-    gender: 'Female',
-    country: 'United States',
-    state: 'Texas',
-    city: 'Alton',
-    address: 'Alton City',
-    pincode: '145203'
-  }
-];
+const initialData = [];
 
 function App() {
   const [formData, setFormData] = useState({
@@ -91,7 +51,7 @@ function App() {
     address: '',
     pincode: ''
   });
-  
+
   const [data, setData] = useState(initialData);
   const [selectedRows, setSelectedRows] = useState([]);
   const [filter, setFilter] = useState('');
@@ -102,18 +62,18 @@ function App() {
         ...prev,
         [field]: value
       };
-      
+
       // Reset state and city when country changes
       if (field === 'country') {
         newData.state = '';
         newData.city = '';
       }
-      
+
       // Reset city when state changes
       if (field === 'state') {
         newData.city = '';
       }
-      
+
       return newData;
     });
   };
@@ -146,8 +106,8 @@ function App() {
   };
 
   const handleRowSelect = (id) => {
-    setSelectedRows(prev => 
-      prev.includes(id) 
+    setSelectedRows(prev =>
+      prev.includes(id)
         ? prev.filter(rowId => rowId !== id)
         : [...prev, id]
     );
@@ -179,10 +139,10 @@ function App() {
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <Container maxWidth="xl" sx={{ py: 3 }}>
         {/* Header */}
-        <Box sx={{ 
-          backgroundColor: '#f9c74f', 
-          p: 2, 
-          borderRadius: 1, 
+        <Box sx={{
+          backgroundColor: '#f9c74f',
+          p: 2,
+          borderRadius: 1,
           mb: 3,
           boxShadow: 1
         }}>
@@ -244,16 +204,16 @@ function App() {
                   value={formData.gender}
                   onChange={(e) => handleInputChange('gender', e.target.value)}
                 >
-                  <FormControlLabel 
-                    value="Male" 
-                    control={<Radio size="small" sx={{ color: '#f9c74f', '&.Mui-checked': { color: '#f9c74f' } }} />} 
-                    label="Male" 
+                  <FormControlLabel
+                    value="Male"
+                    control={<Radio size="small" sx={{ color: '#f9c74f', '&.Mui-checked': { color: '#f9c74f' } }} />}
+                    label="Male"
                     sx={{ '& .MuiFormControlLabel-label': { fontSize: '0.875rem' } }}
                   />
-                  <FormControlLabel 
-                    value="Female" 
-                    control={<Radio size="small" sx={{ color: '#f9c74f', '&.Mui-checked': { color: '#f9c74f' } }} />} 
-                    label="Female" 
+                  <FormControlLabel
+                    value="Female"
+                    control={<Radio size="small" sx={{ color: '#f9c74f', '&.Mui-checked': { color: '#f9c74f' } }} />}
+                    label="Female"
                     sx={{ '& .MuiFormControlLabel-label': { fontSize: '0.875rem' } }}
                   />
                 </RadioGroup>
@@ -287,7 +247,7 @@ function App() {
                   onChange={(e) => handleInputChange('state', e.target.value)}
                   disabled={!formData.country}
                 >
-                  {formData.country && countriesData[formData.country] ? 
+                  {formData.country && countriesData[formData.country] ?
                     countriesData[formData.country].map((state) => (
                       <MenuItem key={state} value={state}>
                         {state}
@@ -306,7 +266,7 @@ function App() {
                   onChange={(e) => handleInputChange('city', e.target.value)}
                   disabled={!formData.state}
                 >
-                  {formData.country && formData.state && citiesData[formData.country] && citiesData[formData.country][formData.state] ? 
+                  {formData.country && formData.state && citiesData[formData.country] && citiesData[formData.country][formData.state] ?
                     citiesData[formData.country][formData.state].map((city) => (
                       <MenuItem key={city} value={city}>
                         {city}
@@ -345,22 +305,22 @@ function App() {
           </Grid>
 
           <Box sx={{ mt: 3, display: 'flex', gap: 2 }}>
-            <Button 
-              variant="contained" 
+            <Button
+              variant="contained"
               onClick={handleSubmit}
-              sx={{ 
-                backgroundColor: '#6c757d', 
+              sx={{
+                backgroundColor: '#6c757d',
                 '&:hover': { backgroundColor: '#5a6268' },
                 textTransform: 'none'
               }}
             >
               Submit
             </Button>
-            <Button 
-              variant="contained" 
+            <Button
+              variant="contained"
               onClick={handleReset}
-              sx={{ 
-                backgroundColor: '#f9c74f', 
+              sx={{
+                backgroundColor: '#f9c74f',
                 color: '#333',
                 '&:hover': { backgroundColor: '#f8b500' },
                 textTransform: 'none'
@@ -380,7 +340,7 @@ function App() {
             placeholder="Search records..."
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            sx={{ 
+            sx={{
               minWidth: 250,
               '& .MuiOutlinedInput-root': {
                 '&:hover .MuiOutlinedInput-notchedOutline': {
@@ -417,7 +377,7 @@ function App() {
         <TableContainer component={Paper}>
           <Table size="small">
             <TableHead>
-              <TableRow sx={{ 
+              <TableRow sx={{
                 backgroundColor: '#f8f9fa',
                 '& .MuiTableCell-root': {
                   color: '#9c27b0',
@@ -468,11 +428,11 @@ function App() {
                   <TableCell>{row.address}</TableCell>
                   <TableCell>{row.pincode}</TableCell>
                   <TableCell align="center">
-                    <IconButton 
-                      size="small" 
+                    <IconButton
+                      size="small"
                       onClick={() => handleEdit(row.id)}
-                      sx={{ 
-                        backgroundColor: '#f9c74f', 
+                      sx={{
+                        backgroundColor: '#f9c74f',
                         '&:hover': { backgroundColor: '#f8b500' },
                         color: '#333'
                       }}
@@ -481,11 +441,11 @@ function App() {
                     </IconButton>
                   </TableCell>
                   <TableCell align="center">
-                    <IconButton 
-                      size="small" 
+                    <IconButton
+                      size="small"
                       onClick={() => handleDelete(row.id)}
-                      sx={{ 
-                        backgroundColor: '#f9c74f', 
+                      sx={{
+                        backgroundColor: '#f9c74f',
                         '&:hover': { backgroundColor: '#f8b500' },
                         color: '#333'
                       }}
