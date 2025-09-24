@@ -18,6 +18,14 @@ mongoose.connection.on("connected", () => {
   console.log("Connected to MongoDB");
 });
 
+mongoose.connection.on("error", (err) => {
+  console.log("MongoDB connection error:", err.message);
+});
+
+mongoose.connection.on("disconnected", () => {
+  console.log("MongoDB disconnected");
+});
+
 app.get("/", (req, res) => {
   res.json({ message: "Server is running!" });
 });
