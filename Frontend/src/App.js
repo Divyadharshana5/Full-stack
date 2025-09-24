@@ -48,6 +48,7 @@ function App() {
     country: '',
     state: '',
     city: '',
+    manualCity: '',
     address: '',
     pincode: ''
   });
@@ -67,11 +68,13 @@ function App() {
       if (field === 'country') {
         newData.state = '';
         newData.city = '';
+        newData.manualCity = '';
       }
 
       // Reset city when state changes
       if (field === 'state') {
         newData.city = '';
+        newData.manualCity = '';
       }
 
       return newData;
@@ -83,7 +86,8 @@ function App() {
       const newEntry = {
         ...formData,
         id: data.length + 1,
-        dateOfBirth: formData.dateOfBirth ? dayjs(formData.dateOfBirth).format('DD-MM-YYYY') : ''
+        dateOfBirth: formData.dateOfBirth ? dayjs(formData.dateOfBirth).format('DD-MM-YYYY') : '',
+        city: formData.city === 'manual' ? formData.manualCity : formData.city
       };
       setData([...data, newEntry]);
       handleReset();
@@ -100,6 +104,7 @@ function App() {
       country: '',
       state: '',
       city: '',
+      manualCity: '',
       address: '',
       pincode: ''
     });
@@ -216,6 +221,12 @@ function App() {
                     label="Female"
                     sx={{ '& .MuiFormControlLabel-label': { fontSize: '0.875rem' } }}
                   />
+                  <FormControlLabel
+                    value="Transgender"
+                    control={<Radio size="small" sx={{ color: '#f9c74f', '&.Mui-checked': { color: '#f9c74f' } }} />}
+                    label="Transgender"
+                    sx={{ '& .MuiFormControlLabel-label': { fontSize: '0.875rem' } }}
+                  />
                 </RadioGroup>
               </FormControl>
             </Grid>
@@ -273,15 +284,25 @@ function App() {
                       </MenuItem>
                     )) : []
                   }
-                  {/* Fallback option for manual entry if no cities available */}
-                  {formData.state && (!citiesData[formData.country] || !citiesData[formData.country][formData.state]) && (
-                    <MenuItem value="" disabled>
-                      <em>No cities available - you can type manually in address</em>
-                    </MenuItem>
-                  )}
+                  <MenuItem value="manual">
+                    <em>Enter city manually</em>
+                  </MenuItem>
                 </Select>
               </FormControl>
             </Grid>
+            {formData.city === 'manual' && (
+              <Grid item xs={12} sm={6} md={2}>
+                <TextField
+                  fullWidth
+                  label="Enter City Name"
+                  variant="outlined"
+                  size="small"
+                  value={formData.manualCity || ''}
+                  onChange={(e) => handleInputChange('manualCity', e.target.value)}
+                  placeholder="Type city name"
+                />
+              </Grid>
+            )}
             <Grid item xs={12} sm={6} md={3}>
               <TextField
                 fullWidth
