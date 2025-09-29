@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/fullstack", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -55,8 +55,10 @@ app.post("/api/users", async (req, res) => {
 app.get("/api/users", async (req, res) => {
   try {
     const users = await User.find();
+    console.log('Users found:', users);
     res.json(users);
   } catch (error) {
+    console.log('Error:', error.message);
     res.status(500).json({ error: error.message });
   }
 });
