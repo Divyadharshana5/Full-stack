@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const User = require("./models/User");
+const User = require("./Models/User");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -31,13 +31,9 @@ app.get("/api/test", (req, res) => {
 });
 
 // GET all users
-app.get("/api/users", async (req, res) => {
-  try {
-    const users = await User.find();
-    res.json(users);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
+app.get('/api/users', async (req, res) => {
+  const users = await User.find(); // Make sure 'User' model correct-a connect aagudhu
+  res.json(users);
 });
 
 // GET user by ID
