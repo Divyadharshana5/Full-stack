@@ -1,0 +1,14 @@
+{
+  "name": "full-stack-app",
+  "version": "1.0.0",
+  "description": "Full-stack CRUD application with React frontend and Express backend",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd Server && npm run dev",
+    "client": "cd Frontend && npm start",
+    "install-all": "npm install && cd Server && npm install && cd ../Frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
